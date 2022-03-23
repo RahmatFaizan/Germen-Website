@@ -43,21 +43,11 @@ closeSearch.addEventListener("click", () => {
 
 var Hamburger = document.getElementById("nav-icon4");
 const phoneNavbar = document.querySelector(".phone-navbar");
-const phoneMain = document.querySelector(".phone-main");
 const phoneNavbarZero = document.querySelector(".phone-navbar-zero");
-const phoneNavbarHeight = document.querySelector(".phone-navbar-dropdown");
 // Hamburger Function
 Hamburger.addEventListener("click", () => {
   Hamburger.classList.toggle("open");
-  phoneMain.classList.toggle("show-dropdown-navbar");
-  // Getting the Height of Menu
-  const setPhoneNavbarHeight = phoneNavbarHeight.getBoundingClientRect().height;
-  // Checking the Hamburger menu
-  if (phoneMain.classList.contains("show-dropdown-navbar")) {
-    phoneNavbarZero.style.height = `${setPhoneNavbarHeight}px`;
-  } else {
-    phoneNavbarZero.style.height = "";
-  }
+  phoneNavbarZero.classList.toggle("autoHeight");
 });
 
 /* ---- Custom Hamburger End's ---- */

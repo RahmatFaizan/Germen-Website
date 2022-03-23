@@ -9,6 +9,9 @@
 }
 
 :root {
+  --dark-black: black;
+  --light-black: black;
+  --bg-white: white;
   --bg-black: #000000d1;
   --bg-primary: #d9e1e2;
   --bg-secondary: #dc4405;
@@ -16,45 +19,81 @@
   --head-text-hover-color: #253746;
   --navbar-text-btn-color: #263747;
   --navbar-text-btn-hover-color: #cf2e2e;
+  --search-popup-bg-color: rgba(0, 0, 0, 0.94);
+  --border-color: rgba(0, 0, 0, 0.1);
 }
-body {
+
+/* Similar Styling Start's */
+body,
+.s-i,
+#nav-icon4,
+.dropdown7,
+.phone-navbar {
   position: relative;
 }
-.fa-angle-down-1 {
+
+.fa-angle-down-1,
+.hide-search-div,
+.search-popup,
+.fa-times,
+.fa-search-btn-2,
+#nav-icon4 span,
+.fa-search-btn-3 {
   position: absolute;
+}
+
+.head-1,
+#header,
+.head,
+#navbar,
+.navbar_btn ul,
+.search-popup,
+.logo-with-menu,
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .navbar_btn ul {
+  justify-content: space-evenly !important;
+} */
+#navbar,
+#header,
+.logo-with-menu,
+.dropdown {
+  justify-content: space-between !important;
+}
+
+.logo,
+.logo1 {
+  font-size: 24px;
+  margin-left: 25px;
+}
+
+/* Similar Styling End's */
+
+.fa-angle-down-1 {
   top: -100px;
   left: 50%;
   font-size: 22px;
   cursor: pointer;
 }
-
+/* Header Styling */
 header {
   background: var(--bg-primary);
 }
 
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 85%;
-  /* position: relative; */
   height: 35px;
   margin: 0 auto;
-}
-
-.head-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .head {
   font-size: 14px;
   letter-spacing: 1px;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .head p {
@@ -64,7 +103,7 @@ header {
 .head-active {
   font-size: 13.2px;
   font-weight: bold;
-  color: white;
+  color: var(--bg-white);
   background: var(--bg-secondary);
   padding: 10px 12px;
 }
@@ -92,19 +131,13 @@ header {
   text-align: center;
 }
 
+/* Header styling End's */
+
+/* Navbar Styling */
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 90%;
   height: 90px;
   margin: 0 auto;
-}
-
-.navbar_btn ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .navbar_btn ul li a {
@@ -123,14 +156,8 @@ header {
   font-size: 16px;
 }
 
-.logo,
-.logo1 {
-  font-size: 24px;
-  margin-left: 25px;
-}
-
+/* Search Section For large Screen Popup Section */
 .hide-search-div {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
@@ -144,15 +171,11 @@ header {
 }
 
 .search-popup {
-  position: absolute;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.94);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--search-popup-bg-color);
   flex-direction: column;
   opacity: 0;
   transition: 0.2s ease-out;
@@ -160,10 +183,9 @@ header {
 }
 
 .fa-times {
-  position: absolute;
   right: 50px;
   top: 70px;
-  color: white;
+  color: var(--bg-white);
   font-size: 18px;
   cursor: pointer;
   transition: transform ease-out 0.2s;
@@ -204,12 +226,7 @@ header {
   box-sizing: border-box;
 }
 
-.s-i {
-  position: relative;
-}
-
 .fa-search-btn-2 {
-  position: absolute;
   bottom: 25px;
   right: 10px;
   color: rgb(255 255 255 / 10%);
@@ -227,12 +244,12 @@ header {
   transform: scale(1);
   opacity: 1;
 }
+/* Popup End */
 
-/* Phone Navbar  */
+/* Large Screen Navbar end */
+
+/* Phone Navbar / Small screen Navbar */
 .logo-with-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100px;
   padding: 0 20px;
 }
@@ -243,17 +260,15 @@ header {
 }
 .phone-navbar {
   box-sizing: border-box;
-  position: relative;
 }
 
 .logo1 {
-  margin: 0;
+  margin: 12px 0 0 0;
 }
 /* Custom Navbar Hamburger */
 
 #nav-icon4 {
-  width: 25px;
-  position: relative;
+  width: 20px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -267,7 +282,6 @@ header {
 
 #nav-icon4 span {
   display: block;
-  position: absolute;
   height: 3px;
   width: 100%;
   background: black;
@@ -280,7 +294,7 @@ header {
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 #nav-icon4 span:nth-child(1) {
@@ -312,8 +326,8 @@ header {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
+  top: 0px;
+  left: 0px;
 }
 
 #nav-icon4.open span:nth-child(2) {
@@ -326,8 +340,8 @@ header {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 15px;
-  left: 8px;
+  top: 14px;
+  left: 0px;
 }
 
 /* Custom Navbar Hamburger End's */
@@ -335,14 +349,11 @@ header {
 /* Phone Navbar Drop Down Styling*/
 
 .dropdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 13px;
   font-weight: bold;
-  color: black;
+  color: var(--dark-black);
   text-transform: uppercase;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--border-color);
   padding: 10px 20px;
 }
 
@@ -352,7 +363,7 @@ header {
 
 .fa-angle-down-2 {
   font-size: 25px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--light-black);
   cursor: pointer;
 }
 
@@ -362,7 +373,6 @@ header {
 
 .dropdown7 {
   padding: 10px 12px;
-  position: relative;
 }
 
 .dropdown7:hover {
@@ -378,7 +388,6 @@ header {
 }
 
 .fa-search-btn-3 {
-  position: absolute;
   bottom: 20px;
   right: 30px;
   font-size: 19px;
@@ -404,12 +413,12 @@ header {
   overflow-y: visible;
 }
 .max-dropdown-zero {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .further-dropdown-main,
 .max-further-dropdown-main {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 .further-dropdown-head {
   text-transform: capitalize;
@@ -429,4 +438,12 @@ header {
 
 .max-further-dropdown-main .further-dropdown1 {
   padding: 12px 20px;
+}
+
+.autoHeight {
+  height: auto;
+}
+
+.phone-main {
+  display: none;
 }

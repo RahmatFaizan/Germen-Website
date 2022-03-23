@@ -1,3 +1,12 @@
+@media screen and (max-width: 1200px) {
+  .phone-main {
+    display: block;
+  }
+  #nav {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 780px) {
   header {
     background: var(--bg-primary);
