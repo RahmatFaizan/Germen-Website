@@ -6,7 +6,6 @@ headDown.addEventListener("click", () => {
   mainHeader.classList.toggle("showHeader");
   // Getting header Height
   var headerHeight = mainHeader.getBoundingClientRect().height;
-  console.log(headerHeight);
   // checking header open or not
   if (mainHeader.classList.contains("showHeader")) {
     headDown.style.top = `${headerHeight}px`;
@@ -45,18 +44,19 @@ closeSearch.addEventListener("click", () => {
 var Hamburger = document.getElementById("nav-icon4");
 const phoneNavbar = document.querySelector(".phone-navbar");
 const phoneMain = document.querySelector(".phone-main");
-const logoWithMenu = document.querySelector(".logo-with-menu");
+const phoneNavbarZero = document.querySelector(".phone-navbar-zero");
+const phoneNavbarHeight = document.querySelector(".phone-navbar-dropdown");
 // Hamburger Function
 Hamburger.addEventListener("click", () => {
   Hamburger.classList.toggle("open");
   phoneMain.classList.toggle("show-dropdown-navbar");
   // Getting the Height of Menu
-  const phoneNavbarHeight = phoneNavbar.getBoundingClientRect().height;
+  const setPhoneNavbarHeight = phoneNavbarHeight.getBoundingClientRect().height;
   // Checking the Hamburger menu
   if (phoneMain.classList.contains("show-dropdown-navbar")) {
-    phoneMain.style.height = `${phoneNavbarHeight}px`;
+    phoneNavbarZero.style.height = `${setPhoneNavbarHeight}px`;
   } else {
-    phoneMain.style.height = ``;
+    phoneNavbarZero.style.height = "";
   }
 });
 
