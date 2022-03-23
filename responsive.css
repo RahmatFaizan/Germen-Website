@@ -1,0 +1,47 @@
+@media screen and (max-width: 780px) {
+  header {
+    background: var(--bg-primary);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -300px;
+    transition: 0.3s;
+    z-index: 4;
+  }
+  .showHeader {
+    top: 0;
+  }
+  .fa-angle-down-1 {
+    top: 0;
+    z-index: 88;
+    transition: 0.3s;
+  }
+  #header {
+    display: block;
+    height: auto;
+    width: 90%;
+  }
+
+  .head {
+    justify-content: flex-start;
+    display: block;
+    margin: 0;
+  }
+
+  .head p {
+    margin: 15px 0 15px 0;
+  }
+
+  .head-2 {
+    display: inline-block;
+  }
+  .head-2 p {
+    margin: -7px 0;
+  }
+  .head-3 {
+    margin: 22px 0;
+  }
+  .head-active {
+    padding: 5px 12px;
+  }
+}
