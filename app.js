@@ -67,7 +67,7 @@ Hamburger.addEventListener("click", () => {
 const phoneAngleDown = document.querySelectorAll(".byScript-1");
 const phoneAngleDown2 = document.querySelectorAll(".byScript-2");
 const dropdownMain = document.querySelectorAll(".dropdown-main");
-
+const maxDropdownMain = document.querySelectorAll(".max-further-dropdown");
 dropdownMain.forEach((e) => {
   // On Mouse Enter
   e.addEventListener("mouseenter", (e) => {
@@ -78,6 +78,17 @@ dropdownMain.forEach((e) => {
     e.currentTarget.classList.remove("activeDropdown");
   });
 });
+
+maxDropdownMain.forEach((e) => {
+  // On Mouse Enter
+  e.addEventListener("mouseenter", (e) => {
+    e.currentTarget.classList.add("max-activeDropdown");
+  });
+  // On Mouse Leave
+  e.addEventListener("mouseleave", (e) => {
+    e.currentTarget.classList.remove("max-activeDropdown");
+  });
+});
 /* Further Dropdown Script */
 phoneAngleDown.forEach((e) => {
   e.addEventListener("click", (e) => {
@@ -86,16 +97,19 @@ phoneAngleDown.forEach((e) => {
     const furtherDropdownMain = document.querySelector(
       ".activeDropdown .further-dropdown-main"
     );
+
     // Get height of Dropdown
-    const heightfurtherDropdownMain =
-      furtherDropdownMain.getBoundingClientRect().height;
+    // const heightfurtherDropdownMain =
+    //   furtherDropdownMain.getBoundingClientRect().height;
+
     // Adding a class to rotate the icon
     e.currentTarget.classList.toggle("iconRotation");
     // Checking the Height is zero or not / dropdown open or not
     if (zeroHeight.style.height != 0) {
       zeroHeight.style.height = ``;
     } else {
-      zeroHeight.style.height = `${heightfurtherDropdownMain}px`;
+      zeroHeight.style.height = "auto";
+      // zeroHeight.style.height = `${heightfurtherDropdownMain}px`;
     }
   });
 });
@@ -104,16 +118,15 @@ phoneAngleDown2.forEach((e) => {
   e.addEventListener("click", (e) => {
     // Get to open more the active dropdown
     const maxZeroHeight = document.querySelector(
-      ".activeDropdown .max-dropdown-zero"
+      ".activeDropdown .max-activeDropdown .max-dropdown-zero"
     );
     const maxDropdownMain = document.querySelector(
-      ".activeDropdown .max-further-dropdown-main"
+      ".activeDropdown .max-activeDropdown .max-further-dropdown-main"
     );
 
     // Get height of Dropdown
     const heightmaxDropdownMain =
       maxDropdownMain.getBoundingClientRect().height;
-
     // Adding a class to rotate the icon
     e.currentTarget.classList.toggle("iconRotation");
 

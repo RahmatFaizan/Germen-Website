@@ -399,6 +399,9 @@ header {
   overflow: hidden;
   transition: 0.5s ease-out;
 }
+.max-dropdown-zero {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .further-dropdown-main,
 .max-further-dropdown-main {
