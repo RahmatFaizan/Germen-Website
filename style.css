@@ -17,10 +17,13 @@
   --bg-secondary: #dc4405;
   --header-text-color: #a8a8a8;
   --head-text-hover-color: #253746;
-  --navbar-text-btn-color: #263747;
   --navbar-text-btn-hover-color: #cf2e2e;
   --search-popup-bg-color: rgba(0, 0, 0, 0.94);
   --border-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Similar Styling Start's */
@@ -134,18 +137,27 @@ header {
 /* Header styling End's */
 
 /* Navbar Styling */
+
+#nav {
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
 #navbar {
   width: 90%;
   height: 90px;
   margin: 0 auto;
 }
 
-.navbar_btn ul li a {
+.navbar_btn ul li a.navbar-ancher-tag {
   margin: 0 20px;
-  color: var(--navbar-text-btn-color);
+  color: var(--dark-black);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 13px;
+  display: block;
+  line-height: 90px;
 }
 
 .navbar_btn ul li a:hover {
@@ -178,7 +190,7 @@ header {
   background: var(--search-popup-bg-color);
   flex-direction: column;
   opacity: 0;
-  transition: 0.2s ease-out;
+  transition: 0.25s ease-in-out;
   z-index: -99999;
 }
 
@@ -245,6 +257,25 @@ header {
   opacity: 1;
 }
 /* Popup End */
+
+/* About Sticky Navbar Styling */
+
+#nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 55px;
+}
+
+#nav.sticky #navbar {
+  height: 55px;
+}
+
+#nav.sticky #navbar .navbar_btn .navbar-ancher-tag {
+  height: 55px;
+  line-height: 55px;
+}
+/* About Sticky Navbar Styling Ends */
 
 /* Large Screen Navbar end */
 
@@ -446,4 +477,48 @@ header {
 
 .phone-main {
   display: none;
+}
+
+/* Large Screen Drop Down  */
+
+.large-screen-dropdown-main {
+  position: absolute;
+  top: 100%;
+  left: 75px;
+  width: 85%;
+  height: auto;
+  background-color: #d9e1e2;
+  padding: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px -2px 0px 0px #253746;
+}
+
+.large-screen-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+}
+
+.main {
+  font-size: 14px !important;
+  font-weight: bold;
+  padding-top: 0 !important;
+  margin-top: -3px;
+}
+.large-screen-dropdown > a {
+  color: var(--dark-black);
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 11px 0;
+  letter-spacing: 1px;
+}
+
+.lg-drop-down {
+  display: none;
+}
+
+.navbar_btn ul li:hover .lg-drop-down {
+  display: block;
 }

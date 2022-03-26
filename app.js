@@ -131,3 +131,12 @@ phoneAngleDown2.forEach((e) => {
 
 /* ---- Further Dropdown height changing Script End's ---- */
 // End's
+
+/* Script For Navbar to fixed on scroll  */
+
+const scrollToFix = document.getElementById("scroll-to-fix");
+const Navbar = document.getElementById("nav");
+window.addEventListener("scroll", () => {
+  const howMuchScroll = scrollToFix.getBoundingClientRect().height;
+  Navbar.classList.toggle("sticky", window.scrollY > howMuchScroll);
+});
