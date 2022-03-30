@@ -142,6 +142,7 @@ header {
   background: white;
   width: 100%;
   position: relative;
+  z-index: 919191;
 }
 
 #navbar {
@@ -184,7 +185,7 @@ header {
 
 .search-popup {
   left: 0;
-  top: 0;
+  top: -35px;
   width: 100vw;
   height: 100vh;
   background: var(--search-popup-bg-color);
@@ -260,11 +261,16 @@ header {
 
 /* About Sticky Navbar Styling */
 
+#nav {
+  transition: top 0.3s;
+}
+
 #nav.sticky {
   position: fixed;
   top: 0;
   left: 0;
   height: 55px;
+  transition: 0.3s;
 }
 
 #nav.sticky #navbar {
@@ -521,4 +527,91 @@ header {
 
 .navbar_btn ul li:hover .lg-drop-down {
   display: block;
+}
+
+/* Section Styling Begin's */
+
+/* Section 1  */
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  position: relative;
+  padding-top: 100px;
+}
+
+.section-1-main {
+  height: auto;
+}
+
+.section-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--head-text-hover-color);
+  z-index: -100;
+}
+
+.Dein-Marketing,
+.zum {
+  padding-top: 35px;
+}
+
+.Dein-Marketing h1,
+.Dein-Marketing p {
+  max-width: 580px;
+  margin: 0 0 0 auto;
+  font-size: 43px;
+  color: white;
+  line-height: 1.25;
+  padding-right: 5px;
+}
+
+.Dein-Marketing p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 65px;
+}
+
+.zum::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(img/1.png), radial-gradient(#fff 1px, transparent 1px);
+  background-repeat: no-repeat, repeat;
+  background-size: 400px 180px, 14px 14px;
+  width: 100%;
+  height: 375px;
+  z-index: -1;
+  box-sizing: border-box;
+  font-weight: 100;
+  background-position: 18px 15px, 0 0;
+}
+
+.zum {
+  position: relative;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 375px;
+}
+
+.Custom-same-btn {
+  z-index: 10;
+  font-size: 14px;
+  color: white;
+  background: var(--bg-secondary);
+  padding: 14px 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 50px 0 0 -72px;
+}
+
+.Custom-same-btn:hover {
+  background: var(--bg-primary);
+  color: var(--dark-black);
 }

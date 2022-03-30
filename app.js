@@ -137,6 +137,6 @@ phoneAngleDown2.forEach((e) => {
 const scrollToFix = document.getElementById("scroll-to-fix");
 const Navbar = document.getElementById("nav");
 window.addEventListener("scroll", () => {
-  const howMuchScroll = scrollToFix.getBoundingClientRect().height;
+  const howMuchScroll = scrollToFix.getBoundingClientRect().height + 10;
   Navbar.classList.toggle("sticky", window.scrollY > howMuchScroll);
 });
