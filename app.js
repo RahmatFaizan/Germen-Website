@@ -31,10 +31,17 @@ const inputAutoFocus = document.getElementById("search-input");
 
 searchICon.addEventListener("click", () => {
   hideSearchDiv.classList.add("show-search-div");
+  inputAutoFocus.focus();
 });
 
 closeSearch.addEventListener("click", () => {
   hideSearchDiv.classList.remove("show-search-div");
+});
+
+inputAutoFocus.addEventListener("blur", () => {
+  hideSearchDiv.addEventListener("mouseup", () => {
+    hideSearchDiv.classList.remove("show-search-div");
+  });
 });
 
 /* Search div Pop Up End's */
@@ -88,12 +95,9 @@ phoneAngleDown.forEach((e) => {
       ".activeDropdown .further-dropdown-main"
     );
 
-    // Get height of Dropdown
-    // const heightfurtherDropdownMain =
-    //   furtherDropdownMain.getBoundingClientRect().height;
-
     // Adding a class to rotate the icon
     e.currentTarget.classList.toggle("iconRotation");
+
     // Checking the Height is zero or not / dropdown open or not
     if (zeroHeight.style.height != 0) {
       zeroHeight.style.height = ``;

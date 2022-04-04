@@ -15,6 +15,27 @@
     margin: 0 0 0 15px;
   }
 }
+@media screen and (max-width: 1145px) {
+  #cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Dein-Marketing {
+    margin-bottom: 70px;
+  }
+  #cards {
+    min-width: 1100px;
+    position: relative;
+    margin: 0;
+  }
+
+  .section-2 {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
 
 @media screen and (max-width: 780px) {
   header {
@@ -71,10 +92,11 @@
 
   .Dein-Marketing {
     padding-top: 0;
+    margin-bottom: 0;
   }
 
   .Custom-same-btn {
-    margin: 35px 0 0 0;
+    margin: 35px 0 85px 0;
   }
 
   .zum::before {
@@ -95,6 +117,23 @@
 
   .section-1 {
     padding-top: 80px;
+  }
+
+  #cards {
+    grid-template-columns: 245px 245px 245px 245px;
+  }
+
+  .card {
+    padding: 20px 15px;
+    min-width: 200px;
+  }
+  .card-flex h3 {
+    font-size: 18px;
+  }
+  .card-para {
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
   }
 }
 
