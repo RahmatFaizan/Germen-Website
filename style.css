@@ -10,7 +10,6 @@
 
 :root {
   --dark-black: black;
-  --light-black: black;
   --bg-white: white;
   --bg-black: #000000d1;
   --bg-primary: #d9e1e2;
@@ -18,9 +17,14 @@
   --header-text-color: #a8a8a8;
   --head-text-hover-color: #253746;
   --navbar-text-btn-hover-color: #cf2e2e;
-  --search-popup-bg-color: rgba(0, 0, 0, 0.94);
+  --search-popup-bg-color: rgba(0, 0, 0, 0.95);
   --border-color: rgba(0, 0, 0, 0.1);
   --card-hover-bg-color: #3a4b58;
+}
+
+::selection {
+  background: #253746;
+  color: white;
 }
 
 body {
@@ -401,7 +405,7 @@ header {
 
 .fa-angle-down-2 {
   font-size: 25px;
-  color: var(--light-black);
+  color: var(--dark-black);
   cursor: pointer;
 }
 
@@ -614,6 +618,7 @@ header {
   font-weight: bold;
   letter-spacing: 1px;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 .Custom-same-btn:hover {
@@ -704,5 +709,181 @@ header {
 }
 
 .card-btn {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+/* Section 3  */
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.marketing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(505px, 1fr));
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.marketing-detail {
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.marketing-detail h1 {
+  font-family: "Roboto";
+  margin: 10px 0;
+  letter-spacing: 2px;
+  color: var(--bg-black);
+}
+
+.line {
+  width: 70%;
+  height: 1px;
+  background-color: black;
+  margin: 35px 0;
+}
+
+.text {
+  line-height: 24px;
+  margin-top: 25px;
+}
+
+.text-link {
+  color: black;
+  font-weight: bold;
+}
+
+.morning-main {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px;
+  cursor: pointer;
+  position: relative;
+  height: 290px;
+}
+
+.morning-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(img/bg-img-1) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.main-2 {
+  background: url(img/bg-img-2) no-repeat center;
+}
+
+.main-3 {
+  background: url(img/bg-img-3) no-repeat center;
+}
+
+.morning {
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.morning:hover {
+  background-color: rgb(37 55 70 / 60%);
+}
+
+.morning-btn {
+  padding: 14px;
+}
+
+.mornong-para {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 12px;
+  background: rgb(37 55 70 / 70%);
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.marketing-img {
+  display: flex;
+  align-items: end;
+}
+.marketing-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+.ranking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-gap: 1rem;
+  box-sizing: border-box;
+  width: 99%;
+  margin: 20px auto;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.same-R-a {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 15px;
+  box-sizing: border-box;
+  background: var(--head-text-hover-color);
+}
+
+.same-R-a:hover {
+  background-color: #d9e1e2;
+}
+
+.same-R-a:hover h3,
+.same-R-a:hover p {
+  color: #253746;
+}
+
+.same-R-a h3 {
+  color: var(--bg-white);
+  font-family: "Roboto";
+}
+
+.rank-para {
+  color: var(--bg-white);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.stylish-line {
+  width: 98%;
+  height: 2px;
+  background-color: var(--bg-secondary);
+  margin: 0 auto 80px auto;
+  position: relative;
+}
+
+.stylish-line::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -19px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  z-index: 2;
+  transform: rotate(45deg);
+  border-bottom: 2px solid var(--bg-secondary);
+  border-right: 2px solid var(--bg-secondary);
 }
