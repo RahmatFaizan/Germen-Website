@@ -188,9 +188,29 @@
     margin: 0 auto 80px auto;
     width: 90%;
   }
-  /* .morning {
-    padding: 0;
-  } */
+
+  .gratis-main {
+    flex-direction: column-reverse;
+  }
+  .gratis-img {
+    height: 300px;
+    width: 100%;
+  }
+  .gratis {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  .gratis-heading {
+    margin: -35px auto 35px auto;
+    padding: 60px 40px 20px 40px;
+    text-align: center;
+  }
+
+  .komplett {
+    width: 100%;
+  }
 }
 
 /* 
