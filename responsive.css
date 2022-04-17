@@ -43,6 +43,10 @@
   .marketing-img {
     justify-content: center;
   }
+
+  .komplett {
+    width: 90%;
+  }
 }
 
 /*  */
@@ -196,7 +200,7 @@
     height: 300px;
     width: 100%;
   }
-  .gratis {
+  .gratis2 {
     width: 100%;
     box-sizing: border-box;
     padding: 0 15px;

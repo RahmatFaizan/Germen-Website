@@ -898,10 +898,11 @@ header {
   padding: 35px 0;
 }
 
-.gratis {
+.gratis2 {
   height: fit-content;
   position: relative;
   width: 50%;
+  padding: 0 0 0 12px;
 }
 
 .gratis-img {
