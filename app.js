@@ -144,3 +144,11 @@ window.addEventListener("scroll", () => {
   const howMuchScroll = scrollToFix.getBoundingClientRect().height + 10;
   Navbar.classList.toggle("sticky", window.scrollY > howMuchScroll);
 });
+
+// Form Check box
+const checkbox = document.querySelector(".checkbox");
+const tick = document.querySelector(".fa-check-1");
+
+checkbox.addEventListener("click", () => {
+  tick.classList.toggle("checked");
+});

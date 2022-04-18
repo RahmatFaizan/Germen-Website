@@ -215,6 +215,33 @@
   .komplett {
     width: 100%;
   }
+
+  .section-7-main {
+    padding: 0px 30px 50px 30px;
+  }
+
+  .trends {
+    flex-direction: column;
+  }
+
+  .tipps,
+  .tipps-form {
+    width: 100%;
+  }
+
+  .tipps .tip-head {
+    font-size: 21px;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  .tipps p {
+    font-size: 15px;
+  }
+
+  .tipps-form {
+    padding: 0;
+  }
 }
 
 /* 
@@ -222,7 +249,7 @@
 /* 
   */
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 580px) {
   #cards {
     min-width: 1043px;
     grid-column-gap: 30px;
@@ -255,6 +282,13 @@
   }
   .marketing-detail {
     padding-bottom: 0;
+  }
+  .fullName {
+    flex-direction: column;
+  }
+  #first-name,
+  #last-name {
+    width: 100%;
   }
 }
 
