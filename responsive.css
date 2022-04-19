@@ -60,6 +60,7 @@
     min-width: 1100px;
     position: relative;
     margin: 0;
+    padding: 0 20px;
   }
 
   .section-2 {
@@ -156,21 +157,31 @@
   }
 
   #cards {
-    grid-template-columns: 230px 230px 230px 230px;
-    height: 335px;
+    grid-template-columns: 250px 250px 250px 250px;
+    height: 380px;
+    padding: 0;
   }
 
+  .card-para {
+    font-size: 16px;
+  }
   .card {
     padding: 20px 15px;
     min-width: 200px;
+    height: 370px;
   }
   .card-flex h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .card-para {
     text-align: center;
-    line-height: 18px;
-    font-size: 12px;
+    line-height: 21px;
+    font-size: 14px;
+  }
+
+  .card-btn {
+    font-size: 14px;
+    padding: 14px 8px;
   }
 
   .ranking {
@@ -261,7 +272,7 @@
 
 @media screen and (max-width: 580px) {
   #cards {
-    min-width: 1043px;
+    min-width: 1130px;
     grid-column-gap: 30px;
   }
 
