@@ -1097,3 +1097,93 @@ header {
   background-color: var(--head-text-hover-color);
   color: white;
 }
+
+/* Footer styling */
+
+#footer-id {
+  background-color: var(--bg-primary);
+}
+
+.footer {
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.allgemein {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.footer-dt {
+  width: 25%;
+}
+
+.footer-sp {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-dt h4 {
+  font-size: 14px;
+  margin: 18px 0;
+}
+
+.footer-a {
+  display: flex;
+}
+
+.footer-icon {
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.fa-envelope {
+  font-size: 16px;
+}
+
+.footer-dt .footer-lo {
+  margin-left: 12px;
+  font-size: 16px;
+}
+
+.footer-sp a {
+  margin: 7px 0;
+  font-size: 14px;
+  color: var(--head-text-hover-color);
+}
+
+.footer-sp a:hover {
+  color: var(--bg-secondary);
+}
+
+.footer-sp a:hover span i {
+  color: black;
+}
+
+.lastpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lastpart p {
+  color: var(--bg-primary);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links a img {
+  margin: 10px;
+}
+
+.end {
+  padding: 25px 0;
+  background: var(--head-text-hover-color);
+}

@@ -242,6 +242,16 @@
   .tipps-form {
     padding: 0;
   }
+
+  .footer,
+  .allgemein {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-dt {
+    width: 100%;
+  }
 }
 
 /* 
@@ -289,6 +299,16 @@
   #first-name,
   #last-name {
     width: 100%;
+  }
+
+  .lastpart {
+    flex-direction: column;
+  }
+  .end {
+    padding: 12px 0 5px 0;
+  }
+  .footer-links a img {
+    margin: 22px 10px 0 10px;
   }
 }
 
