@@ -307,8 +307,7 @@
   .fullName {
     flex-direction: column;
   }
-  #first-name,
-  #last-name {
+  .Name {
     width: 100%;
   }
 

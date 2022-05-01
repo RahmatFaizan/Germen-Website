@@ -1,0 +1,26 @@
+allInputs.forEach((e) => {
+  e.addEventListener("keydown", () => {
+    if (e.value == "" || e.value == " ") {
+      e.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+      lastInvalid.innerText =
+        "Bitte korrigiere die Fehler, bevor du das Formular sendest.";
+      e.style.borderColor = "red";
+    } else {
+      e.nextElementSibling.textContent = "";
+      lastInvalid.innerText = "";
+      e.style.borderColor = "green";
+    }
+  });
+});
+/* ------------------------------------------ */
+var email = document.querySelector(".form-control");
+var invalidMsg = document.querySelector(".email-invalid");
+
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+email.addEventListener("keyup", () => {
+  if (email.value.match(pattern)) {
+    invalidMsg.textContent = " Valid Email";
+  } else {
+    invalidMsg.textContent = " Invalid Email";
+  }
+});

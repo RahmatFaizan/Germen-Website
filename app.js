@@ -145,10 +145,320 @@ window.addEventListener("scroll", () => {
   Navbar.classList.toggle("sticky", window.scrollY > howMuchScroll);
 });
 
+// Form Custom validation
+
+const allInputs = document.querySelectorAll(".familar-input");
+var lastInvalid = document.querySelector(".invalid-gen");
+var Form = document.querySelector(".form");
+
+//
+
+var fName = document.getElementById("first-name");
+var lName = document.getElementById("last-name");
+var webInput = document.getElementById("Website");
+var email = document.getElementById("email");
+
+//
+
+var fNameWarn = document.querySelector(".fname-warn");
+var lNameWarn = document.querySelector(".lname-warn");
+var webInputWarn = document.querySelector(".web-warn");
+var emailWarn = document.querySelector(".email-warn");
+
+//
+
+var fNameCheck = document.querySelector(".fname-check");
+var lNameCheck = document.querySelector(".lname-check");
+var webInputCheck = document.querySelector(".web-check");
+var emailCheck = document.querySelector(".email-check");
+
+//
+
+var submitBtn = document.querySelector(".submit-btn");
+
+//
+
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
 // Form Check box
+
 const checkbox = document.querySelector(".checkbox");
 const tick = document.querySelector(".fa-check-1");
+const invalidCheckbox = document.querySelector(".invalid-checkbox");
 
+//
+
+allInputs.forEach((e) => {
+  e.addEventListener("blur", () => {
+    if (e.value == "" || e.value == " ") {
+      e.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+      e.classList.add("e-rro-r");
+    } else {
+      e.nextElementSibling.textContent = "";
+      e.classList.remove("e-rro-r");
+    }
+    lastErrorText();
+  });
+});
+
+function lastErrorMsgCheck() {
+  allInputs.forEach((e) => {
+    e.addEventListener("keyup", () => {
+      lastErrorText();
+    });
+  });
+}
+
+//
+
+function lastErrorText() {
+  if (
+    fName.classList.contains("e-rro-r") ||
+    lName.classList.contains("e-rro-r") ||
+    webInput.classList.contains("e-rro-r") ||
+    email.classList.contains("e-rro-r") ||
+    email.classList.contains("pattern-e-rro-r") ||
+    tick.classList.contains("e-rro-r")
+  ) {
+    lastInvalid.textContent =
+      "Bitte korrigiere die Fehler, bevor du das Formular sendest.";
+    lastErrorMsgCheck();
+  } else {
+    lastInvalid.textContent = "";
+  }
+}
+//
+
+function fNameErrorCheck() {
+  fName.addEventListener("keyup", () => {
+    if (fName.value == "" || fName.value == " ") {
+      fName.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+      fNameWarn.style.width = "48px";
+      fNameCheck.style.width = "0";
+      fName.style.borderColor = "red";
+      fName.classList.add("e-rro-r");
+    } else {
+      fName.nextElementSibling.textContent = "";
+      fNameWarn.style.width = "0";
+      fNameCheck.style.width = "25px";
+      fName.style.borderColor = "green";
+      fName.classList.remove("e-rro-r");
+    }
+  });
+}
+
+function lNameErrorCheck() {
+  lName.addEventListener("keyup", () => {
+    if (lName.value == "" || lName.value == " ") {
+      lName.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+      lNameWarn.style.width = "48px";
+      lNameCheck.style.width = "0";
+      lName.style.borderColor = "red";
+      lName.classList.add("e-rro-r");
+    } else {
+      lName.nextElementSibling.textContent = "";
+      lNameWarn.style.width = "0";
+      lNameCheck.style.width = "25px";
+      lName.style.borderColor = "green";
+      lName.classList.remove("e-rro-r");
+    }
+  });
+}
+
+function webInputErrorCheck() {
+  webInput.addEventListener("keyup", () => {
+    if (webInput.value == "" || webInput.value == " ") {
+      webInput.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+      webInputWarn.style.width = "48px";
+      webInputCheck.style.width = "0";
+      webInput.style.borderColor = "red";
+      webInput.classList.add("e-rro-r");
+    } else {
+      webInput.nextElementSibling.textContent = "";
+      webInputWarn.style.width = "0";
+      webInputCheck.style.width = "25px";
+      webInput.style.borderColor = "green";
+      webInput.classList.remove("e-rro-r");
+    }
+  });
+}
+
+function emailErrorCheck() {
+  email.addEventListener("keyup", () => {
+    if (!email.value.match(pattern)) {
+      email.nextElementSibling.textContent =
+        "Bitte gib eine gültige E-Mail-Adresse ein.";
+      emailWarn.style.width = "48px";
+      emailCheck.style.width = "0";
+      email.style.borderColor = "red";
+      email.classList.add("e-rro-r");
+      email.classList.add("pattern-e-rro-r");
+    } else {
+      email.nextElementSibling.textContent = "";
+      emailWarn.style.width = "0";
+      emailCheck.style.width = "25px";
+      email.style.borderColor = "green";
+      email.classList.remove("e-rro-r");
+      email.classList.remove("pattern-e-rro-r");
+    }
+  });
+}
+function showfNameError() {
+  fNameWarn.style.width = "48px";
+  fNameCheck.style.width = "0";
+  fName.style.borderColor = "red";
+  fName.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+}
+
+function showlNameError() {
+  lNameWarn.style.width = "48px";
+  lNameCheck.style.width = "0";
+  lName.style.borderColor = "red";
+  lName.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+}
+
+function invalidEmail() {
+  emailWarn.style.width = "48px";
+  emailCheck.style.width = "0";
+  email.style.borderColor = "red";
+  email.nextElementSibling.textContent =
+    "Bitte gib eine gültige E-Mail-Adresse ein.";
+}
+
+function showEmailError() {
+  emailWarn.style.width = "48px";
+  emailCheck.style.width = "0";
+  email.style.borderColor = "red";
+  email.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+}
+
+function showWebError() {
+  webInputWarn.style.width = "48px";
+  webInputCheck.style.width = "0";
+  webInput.style.borderColor = "red";
+  webInput.nextElementSibling.textContent = "Dies ist ein Pflichtfeld.";
+}
+
+//
+
+fName.addEventListener("blur", () => {
+  if (fName.value == "" || fName.value == " ") {
+    showfNameError();
+    fNameErrorCheck();
+  } else {
+  }
+});
+
+lName.addEventListener("blur", () => {
+  if (lName.value == "" || lName.value == " ") {
+    lNameErrorCheck();
+    showlNameError();
+  } else {
+  }
+});
+
+email.addEventListener("blur", () => {
+  if (!email.value.match(pattern)) {
+    emailErrorCheck();
+    invalidEmail();
+  } else {
+  }
+
+  //
+
+  if (email.value == "") {
+    showEmailError();
+    emailErrorCheck();
+  } else {
+  }
+});
+
+webInput.addEventListener("blur", () => {
+  if (webInput.value == "" || webInput.value == " ") {
+    webInputErrorCheck();
+    showWebError();
+  } else {
+  }
+});
+
+//
+function checkboxFtn() {
+  if (tick.classList.contains("checked")) {
+    invalidCheckbox.textContent = "";
+    tick.classList.remove("e-rro-r");
+  } else {
+    invalidCheckbox.textContent = "Dies ist ein Pflichtfeld.";
+    tick.classList.add("e-rro-r");
+  }
+}
 checkbox.addEventListener("click", () => {
   tick.classList.toggle("checked");
+  checkboxFtn();
+  lastErrorText();
+});
+
+//
+
+//
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  checkboxFtn();
+  if (
+    fName.value == "" ||
+    fName.value == " " ||
+    lName.value == "" ||
+    lName.value == " " ||
+    webInput.value == "" ||
+    webInput.value == " " ||
+    email.value == "" ||
+    !tick.classList.contains("checked")
+  ) {
+    Form.lastElementChild.textContent =
+      "Bitte korrigiere die Fehler, bevor du das Formular sendest.";
+  } else {
+    Form.lastElementChild.textContent = "";
+  }
+
+  //
+
+  if (fName.value == "" || fName.value == " ") {
+    showfNameError();
+    fNameErrorCheck();
+  } else {
+  }
+
+  //
+
+  if (lName.value == "" || lName.value == " ") {
+    lNameErrorCheck();
+    showlNameError();
+  } else {
+  }
+
+  //
+
+  if (!email.value.match(pattern)) {
+    emailErrorCheck();
+    invalidEmail();
+  } else {
+  }
+
+  //
+
+  if (email.value == "") {
+    showEmailError();
+    emailErrorCheck();
+  } else {
+  }
+
+  //
+
+  if (webInput.value == "" || webInput.value == " ") {
+    webInputErrorCheck();
+    showWebError();
+  } else {
+  }
+
+  //
 });
