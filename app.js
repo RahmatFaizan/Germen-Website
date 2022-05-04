@@ -477,3 +477,11 @@ window.addEventListener("scroll", () => {
     btnScroltoTop.classList.remove("showscrolar");
   }
 });
+
+btnScroltoTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});

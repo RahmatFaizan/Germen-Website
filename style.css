@@ -1275,6 +1275,7 @@ header {
   background-color: rgba(0, 0, 0, 0.15);
   margin: 15px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .showscrolar {
