@@ -462,3 +462,18 @@ submitBtn.addEventListener("click", (e) => {
 
   //
 });
+
+//
+
+// Scroll to top btn
+
+const btnScroltoTop = document.querySelector(".scrolTo-top");
+
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset > "440") {
+    btnScroltoTop.classList.add("showscrolar");
+  } else {
+    btnScroltoTop.classList.remove("showscrolar");
+  }
+});

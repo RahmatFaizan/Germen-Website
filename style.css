@@ -1262,3 +1262,26 @@ header {
 .valid {
   width: 25px;
 }
+
+.up-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -90px;
+  bottom: 0;
+  width: 45px;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 15px;
+  transition: 0.3s;
+}
+
+.showscrolar {
+  right: 0;
+}
+
+.fa-angle-up {
+  font-size: 20px;
+  color: white;
+}
