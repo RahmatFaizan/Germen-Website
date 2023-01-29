@@ -470,7 +470,6 @@ submitBtn.addEventListener("click", (e) => {
 const btnScroltoTop = document.querySelector(".scrolTo-top");
 
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset);
   if (window.pageYOffset > "440") {
     btnScroltoTop.classList.add("showscrolar");
   } else {
