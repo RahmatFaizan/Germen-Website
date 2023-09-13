@@ -135,6 +135,11 @@ header {
   margin: 0px 5px;
   padding: 1px 0 0 2px;
   text-align: center;
+  cursor: pointer;
+}
+
+.head-3.head i:hover {
+    background: var(--bg-secondary);
 }
 
 /* Header styling End's */
